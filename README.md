@@ -8,23 +8,43 @@ Crud Project
 ### 1.2 - CREATE TYPE FORMA_PAGAMENTO AS ENUM ('debito', 'credito');
 
 ### 1.2 - CREATE TABLE doadores (
-	        id SERIAL PRIMARY KEY NOT NULL,
-	        nome VARCHAR(255),
-	        email VARCHAR(255),
-	        cpf CHAR(11),
-	        data_nascimento DATE,
-	        intervalo_doacao INTERVALO_DOACAO,
-	        preco_doacao NUMERIC(19,2),
-	        forma_pagamento FORMA_PAGAMENTO,
-	        cep VARCHAR(255),
-	        endereco VARCHAR(255),
-	        numero INTEGER,
-	        bairro VARCHAR(255),
-	        cidade VARCHAR(255),
-	        uf VARCHAR(255)
-          );
+	       CREATE DATABASE db_doadores;
 
-          SELECT * FROM doadores 
+CREATE TYPE INTERVALO_DOACAO AS ENUM
+(
+	'unico',
+	'bimestral',
+	'semestral',
+	'anual'
+);
+
+CREATE TYPE FORMA_PAGAMENTO AS ENUM
+(
+	'debito',
+	'credito'
+);
+	
+CREATE TABLE tb_doadores
+(
+	doador_id SERIAL PRIMARY KEY,
+	nome VARCHAR(255),
+	email VARCHAR(255),
+	cpf CHAR(11),
+	telefone VARCHAR(55),
+	data_nascimento DATE,
+	data_cadastro DATE,
+	intervalo_doacao INTERVALO_DOACAO,
+	forma_pagamento FORMA_PAGAMENTO,
+	preco_doacao NUMERIC(19,2),
+	cep VARCHAR(55),
+	endereco VARCHAR(255),
+	numero INTEGER,
+	bairro VARCHAR(55),
+	cidade VARCHAR(55),
+	uf VARCHAR(55)
+);
+	
+SELECT * FROM tb_doadores;	
 
 ### 2° - Download and execute **composer install**
 
