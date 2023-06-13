@@ -7,25 +7,26 @@ Crud Project
 ### 1.1 - CREATE TYPE INTERVALO_DOACAO AS ENUM ('unico', 'bimestral', 'semestral', 'anual');
 ### 1.2 - CREATE TYPE FORMA_PAGAMENTO AS ENUM ('debito', 'credito');
 
-### 1.2 - CREATE TABLE doadores (
-	       CREATE DATABASE db_doadores;
+### 1.2 - CREATE TABLE doadores 
 
-CREATE TYPE INTERVALO_DOACAO AS ENUM
-(
+    CREATE DATABASE db_doadores;
+
+    CREATE TYPE INTERVALO_DOACAO AS ENUM
+    (
 	'unico',
 	'bimestral',
 	'semestral',
 	'anual'
-);
+    );
 
-CREATE TYPE FORMA_PAGAMENTO AS ENUM
-(
+    CREATE TYPE FORMA_PAGAMENTO AS ENUM
+    (
 	'debito',
 	'credito'
-);
+    );
 	
-CREATE TABLE tb_doadores
-(
+    CREATE TABLE tb_doadores
+    (
 	doador_id SERIAL PRIMARY KEY,
 	nome VARCHAR(255),
 	email VARCHAR(255),
@@ -42,7 +43,7 @@ CREATE TABLE tb_doadores
 	bairro VARCHAR(55),
 	cidade VARCHAR(55),
 	uf VARCHAR(55)
-);
+     );
 	
 SELECT * FROM tb_doadores;	
 
