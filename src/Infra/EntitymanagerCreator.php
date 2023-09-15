@@ -16,7 +16,7 @@ class EntitymanagerCreator
             'host' => 'localhost',
             'dbname' => 'db_doadores',
             'user' => 'root',
-            'password' => '1112marci-O'
+            'password' => '111'
         ];
 
         //$dadosConexao = [
