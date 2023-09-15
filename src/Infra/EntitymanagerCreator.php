@@ -12,12 +12,20 @@ class EntitymanagerCreator
     {
         $config = Setup::createAnnotationMetadataConfiguration([__DIR__ . '/../Entity'], true);
         $dadosConexao = [
-            'driver' => 'pdo_pgsql',
+            'driver' => 'pdo_mysql',
             'host' => 'localhost',
             'dbname' => 'db_doadores',
-            'user' => 'postgres',
-            'password' => '1112'
+            'user' => 'root',
+            'password' => '1112marci-O'
         ];
+
+        //$dadosConexao = [
+        //    'driver' => 'pdo_pgsql',
+        //    'host' => 'localhost',
+        //    'dbname' => 'db_doadores',
+        //    'user' => 'postgres',
+        //    'password' => '1112'
+        //];
 
         return EntityManager::create($dadosConexao, $config);
     }

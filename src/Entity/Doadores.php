@@ -4,7 +4,7 @@ namespace Src\Crud\Entity;
 
 /**
  * @Entity
- * @Table(name="doadores")
+ * @Table(name="tb_doadores")
  */
 class Doadores
 {
